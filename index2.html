@@ -1,0 +1,301 @@
+<html>
+    <head>
+        <title>First</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <style>
+        body {
+            background: url('https://pub-static.fotor.com/assets/bg/835e8b4a-6aad-48b9-a105-cff386b3afc3.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+        }
+        .header h1 {
+            margin: 10px 0;
+        }
+        .header p {
+            margin: 10px 0;
+        }
+        .top-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        #img {
+            display: inline-block;
+            width: 150px;
+            height: 70px;
+            border-radius: 15px;
+        }
+        #search {
+            display: flex;
+            flex-grow: 1;
+            justify-content: center;
+        }
+        #search-box {
+            padding: 5px;
+            border-radius: 15px;
+            font-size: 16px;
+            width: 600px;
+        }
+        #sign-in {
+            display: inline-block;
+        }
+        #sign-in button {
+            width: 100px;
+            height: 50px;
+            border-radius: 25px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            transform-style: preserve-3d;
+            perspective: 500px;
+            margin: 20px auto;
+            max-width: 1200px;
+        }
+        .container .box {
+            position: relative;
+            width: 275px;
+            height: 275px;
+            background: #000;
+            transition: 0.5s;
+            transform-style: preserve-3d;
+            overflow: hidden;
+            margin: 15px;
+            border-radius: 20px;
+        }
+        .container:hover .box {
+            transform: rotateY(25deg);
+        }
+        .container .box:hover ~ .box {
+            transform: rotateY(-25deg);
+        }
+        .container .box:hover {
+            transform: rotateY(0deg) scale(1.25);
+            z-index: 1;
+            box-shadow: 0 25px 40px rgba(0,0,0,0.5);
+        }
+        .container .box .imgBx {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .container .box .imgBx:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg,#f00,#000);
+            z-index: 1;
+            opacity: 0;
+            transition: 0.5s;
+            mix-blend-mode: multiply;
+        }
+        .container .box:hover .imgBx:before {
+            opacity: 1;
+        }
+        .container .box .imgBx img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .container .box .content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            display: flex;
+            padding: 20px;
+            align-items: flex-end;
+            box-sizing: border-box;
+        }
+        .container .box .content h2 {
+            color: #fff;
+            transition: 0.5s;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            font-size: 20px;
+            transform: translateY(200px);
+            transition-delay: 0.3s;
+        }
+        .container .box:hover .content h2 {
+            transform: translateY(0px);
+        }
+        .container .box .content p {
+            color: #fff;
+            transition: 0.5s;
+            font-size: 14px;
+            transform: translateY(200px);
+            transition-delay: 0.4s;
+        }
+        .container .box:hover .content p {
+            transform: translateY(0px);
+        }
+        .movies-section, .life-events-section, .premier-section {
+            margin: 20px;
+            text-align: center;
+        }
+        .life-events-section img, .premier-section img {
+            margin: 10px;
+            border-radius: 20px;
+        }
+        .premier-section {
+            background-color: black;
+            color: white;
+            padding: 20px;
+        }
+        .premier-section h1, .premier-section h4 {
+            margin: 10px 0;
+        }
+        .book-now {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .book-now button {
+            border-radius: 15px;
+            height: 50px;
+            width: 100px;
+            background-color: red;
+        }
+    </style>
+    <body>
+        <div class="header">
+            <h1>Online Movie Booking</h1>
+            <h2>Enjoy the movie!!!</h2>
+            <p>"The only limit to our realization of tomorrow is our doubts of today." - Franklin D. Roosevelt</p>
+        </div>
+
+        <div class="top-container">
+            <img src="https://getlogo.net/wp-content/uploads/2020/04/bookmyshow-logo-vector.png" id="img">
+            <div id="search">
+                <input type="text" id="search-box" placeholder="Search..">
+            </div>
+            <div id="sign-in">
+                <a href="index3.html"><button>Sign In</button></a>
+
+            </div>
+        </div>
+
+        <img src="https://t3.ftcdn.net/jpg/06/89/46/98/360_F_689469806_vRkzqupZDz8r6xTTtCYSoVa3DncTtnth.jpg" width="100%" height="450px;" style="margin-top:25px;">
+
+        <div class="movies-section">
+            <h1>About the movie</h1>
+            <h3>Police officer Devan is a very truthful man but a certain sequence of events changes his character and his quest for vengeance affects relationships and life.</h3>
+        </div>
+
+        <div class="movies-section">
+            <h1>Recommended Movies</h1>
+            <div class="container">
+                <div class="box">
+                    <div class="imgBx">
+                        <img src="https://feeds.abplive.com/onecms/images/uploaded-images/2023/08/13/790059ae61c12e141f84117d61a520f51691929013337721_original.jpg" style="margin-left:10px">
+                    </div>
+                    <div class="content">
+                        <div>
+                            <p>Price: 220</p>
+                            <h2>Gadar 2</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="imgBx">
+                        <img src="https://assets-in.bmscdn.com/discovery-catalog/events/et00361712-ertnqcjfyy-landscape.jpg" style="margin-left:10px">
+                    </div>
+                    <div class="content">
+                        <div>
+                            <p>Price: 200</p>
+                            <h2>OMG 2</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="imgBx">
+                        <img src="https://content.tupaki.com/en/feeds/2023/08/10/142196-jail.webp" style="margin-left:10px">
+                    </div>
+                    <div class="content">
+                        <div>
+                            <p>Price: 250</p>
+                            <h2>Jailer</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="imgBx">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMTI4NGNiMmEtOWZlNy00ZmMyLTgyMmMtYzEwZDNiZjQ0ZjcwXkEyXkFqcGdeQXVyMjA4OTI5NDQ@._V1_.jpg" style="margin-left:10px">
+                    </div>
+                    <div class="content">
+                        <div>
+                            <p>Price: 300</p>
+                            <h2>Aranmanai</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="imgBx">
+                        <img src="https://static.wixstatic.com/media/f5c15d_4606dfe095844ef2b92101ae2312b00e~mv2.jpg/v1/fill/w_640,h_854,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/f5c15d_4606dfe095844ef2b92101ae2312b00e~mv2.jpg">
+                    </div>
+                    <div class="content">
+                        <div>
+                            <p>Price: 500</p>
+                            <h2>Godzilla</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="imgBx">
+                        <img src="https://i0.wp.com/thedebriefindia.com/wp-content/uploads/2023/07/Cover-20Picture.png?fit=1024%2C911&ssl=1">
+                    </div>
+                    <div class="content">
+                        <div>
+                            <p>Price: 200</p>
+                            <h2>OMG</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="life-events-section">
+            <h1>Best of life events</h1>
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-OSBFdmVudHM%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/workshop-and-more-web-collection-202211140440.png" width="200px" height="200px">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-MyBFdmVudHM%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/bmshp-desktop-kids-collection-202404190106.png" width="200px" height="200px">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-MTArIEV2ZW50cw%3D%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/comedy-shows-collection-202211140440.png" width="200px" height="200px">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-NCBFdmVudHM%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/music-shows-collection-202211140440.png" width="200px" height="200px">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-NSBFdmVudHM%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/arts-crafts-collection-202211140440.png" width="200px" height="200px">
+        </div>
+
+        <div class="premier-section">
+            <h1><img src="https://image.similarpng.com/very-thumbnail/2020/11/Play-button-icon-on-transparent-background-PNG.png" style="border-radius:50%;" width="37px" height="37px"> Premier</h1>
+            <h1>Premiers</h1>
+            <h4>Brand new release every day</h4>
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:l-image,i-discovery-catalog@@icons@@bms_premiere_v1.png,t-false,lfo-bottom_left,l-end/et00396647-rascpuyyfz-portrait.jpg" width="200px" height="350px">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:l-image,i-discovery-catalog@@icons@@bms_premiere_v1.png,t-false,lfo-bottom_left,l-end/et00387057-jvbqczhlyx-portrait.jpg" width="200px" height="350px;">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:l-image,i-discovery-catalog@@icons@@bms_premiere_v1.png,t-false,lfo-bottom_left,l-end/et00396920-kqyrlcffwp-portrait.jpg" width="200px" height="350px;">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:l-image,i-discovery-catalog@@icons@@bms_premiere_v1.png,t-false,lfo-bottom_left,l-end/et00358147-hmjltsegja-portrait.jpg" width="200px" height="350px;">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:l-image,i-discovery-catalog@@icons@@bms_premiere_v1.png,t-false,lfo-bottom_left,l-end/et00396946-efzvhvyyjr-portrait.jpg" width="200px" height="350px;">
+        </div>
+
+        <div class="book-now">
+            <a href="index.html"><button>Book now</button></a>
+        </div>
+    </body>
+</html>

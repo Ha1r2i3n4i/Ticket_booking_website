@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Ticket Booking System</title>
+    <link rel="shortcut icon" href="./images/icon-movie.webp" type="image/x-icon">
+    <link rel="stylesheet" href="index.css">
+</head>
+<script>
+    // script.js
+
+document.addEventListener('DOMContentLoaded', () => {
+    const submitBtn = document.getElementById('submitBtn');
+    submitBtn.addEventListener('click', () => {
+        // You can add additional logic here to process the booking
+        alert('Your ticket has been booked!');
+    });
+});
+
+</script>
+
+<body>
+    <!--Movie select option-->
+    <div class="movie-container">
+        <label> Select a movie:</label>
+        <select id="movie">
+            <option value="220">Gadar 2 (RS.220)</option>
+            <option value="200">OMG 2 (RS.200)</option>
+            <option value="250">Jailer (RS.250)</option>
+            <option value="300">Aranmanai (Rs.300)</option>
+            <option value="500">Godzilla (Rs.500)</option>
+            <option value="200">OMG (Rs.200)</option>
+        </select>
+    </div>
+
+    <!--Showcase-->
+    <ul class="showcase">
+        <li>
+            <div class="seat"></div>
+            <small>Available</small>
+        </li>
+        <li>
+            <div class="seat selected"></div>
+            <small>Selected</small>
+        </li>
+        <li>
+            <div class="seat sold"></div>
+            <small>Sold</small>
+        </li>
+    </ul>
+
+    <!--Main Container-->
+    <div class="container">
+        <div class="screen"></div>
+
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat sold"></div>
+            <div class="seat sold"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat sold"></div>
+            <div class="seat sold"></div>
+        </div>
+
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat sold"></div>
+            <div class="seat sold"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat sold"></div>
+            <div class="seat sold"></div>
+            <div class="seat sold"></div>
+            <div class="seat"></div>
+        </div>
+    </div>
+
+    <p class="text"> You have selected <span id="count">0</span> seat for a price of RS.<span id="total">0</span> </p>
+    <button id="submitBtn" style="margin-top:20px;border-radius:15px;height:50px;width:100px; background-color: green;">Submit</button>
+    <script src="script.js"></script>
+</body>
+
+</html>
